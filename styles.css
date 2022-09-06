@@ -1,0 +1,227 @@
+:root {
+  --clr-primary: hsl(25, 97%, 53%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-grey: hsl(217, 12%, 63%);
+  --clr-medium-grey: hsl(216, 12%, 54%);
+  --clr-dark-blue: hsl(213, 19%, 18%);
+  --clr-very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {box-sizing: border-box;}
+
+html {font-family: 'Overpass', sans-serif;}
+
+body {font-size: 15px;}
+
+body, 
+h1, 
+h2, 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-very-dark-blue);
+}
+
+main {
+  height: 415px;
+  max-width: 410px;
+  padding: 2em;
+  background-color: hsla(213, 19%, 18%, 0.7);
+  border-radius: 2em;
+}
+
+.star-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.25em;
+  height: 3.25em;
+  border-radius: 50%;
+  background-color: var(--clr-dark-blue);
+}
+
+.form-title {
+  color: var(--clr-white);
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.form-text {
+  color: var(--clr-medium-grey);
+  margin-top: 1em;
+}
+
+.ratings-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3.25em;
+  height: 3.25em;
+
+  color: var(--clr-medium-grey);
+  background-color: var(--clr-dark-blue);
+  border-radius: 50%;
+}
+
+/* class for selected option */
+.selected {
+  color: var(--clr-white);
+  background-color: var(--clr-light-grey);
+}
+
+
+
+.label:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+  cursor: pointer;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+.ratings-container input[type=radio] {
+  display: none;
+}
+
+/* notification when no option is selected */
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 55px;
+  transform: translateX(-50%);
+  text-align: center;
+  
+  width: 100%;
+
+  font-size: 1.25em;
+  color: var(--clr-white);
+  
+  opacity: 0;
+}
+
+.popup.visible {
+  opacity: 1.0;
+  transition: opacity 250ms linear;
+}
+
+/* submit button */
+
+button {
+  display: block;
+  margin-top: 2em;
+  padding: 1em;
+  width: 100%;
+
+  color: hsla(0, 0%, 100%, 0.8);
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  background-color: var(--clr-primary);
+
+  border: none;
+  border-radius: 100vw;
+}
+
+button:hover {
+  cursor: pointer;
+  color: var(--clr-primary);
+  background-color: var(--clr-white);
+}
+
+/* information shown after submitting a rating */
+
+.submit-card {
+  display: none;
+  text-align: center;
+  padding: 1em;
+}
+
+.submitted-confirm-text {
+  margin-top: 1em;
+  margin-inline: auto;
+  padding: 0.5em 1em;
+  width: fit-content;
+
+  color: hsla(25, 97%, 53%, 0.8);
+  background-color:hsla(213, 19%, 18%, 0.7);
+  border-radius: 100vw;
+}
+
+.submitted-title {
+  margin-top: 1em;
+  color: var(--clr-white);
+}
+
+.submitted-text {
+  margin-top: 1em;
+  color: var(--clr-medium-grey);
+}
+
+
+/* mobile design */
+
+@media (max-width: 500px) {
+
+  /* before submitting */
+  main {
+    max-width: 325px;
+    height: auto;
+    padding: 1.25em 1.5em 2em;
+    border-radius: 1em;
+  }
+
+  .star-background {
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  .star-icon {
+    width: 40%;
+  }
+
+  .form-title {
+    margin-top: 1em;
+    font-size: 1.5em;
+  }
+
+  p {
+    letter-spacing: -1px;;
+  }
+
+  .label {
+    width: 2.75em;
+    height: 2.75em;
+  }
+
+  button {
+    font-size: 0.9em;
+  }
+
+  /* after submitting */
+  .phone-icon {
+    max-width: 60%;
+    height: auto;
+  }
+
+  .submitted-title {
+    font-size: 1.5em;
+  }
+}
