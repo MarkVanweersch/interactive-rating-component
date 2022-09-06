@@ -27,21 +27,7 @@ function onLoad() {
 
     let label = event.currentTarget;
     console.log(label);
-
-    // let labelContainer = event.currentTarget.parentElement;
-    // console.log(labelContainer);
-    
     const radio = label.querySelector("input[type=radio]");
-
-
-
-    /* if (label.tagName === "LABEL") {
-      let parentLabel = label.parentElement;
-      console.log(parentLabel);
-      parentLabel.classList.add("selected");
-    } */
-
-    
 
     for (let i in allRadios) {
       allRadios[i].setAttribute("checked", "false");
