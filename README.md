@@ -49,8 +49,8 @@ Mobile after submitting:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [FrontendMentor.io](https://www.frontendmentor.io/solutions/interactive-rating-component-using-html-form-and-javascript-Qm-7QFLxCF)
+- Live Site URL: [MarkVanweersch GitHub Pages](https://markvanweersch.github.io/)
 
 ## My process
 
